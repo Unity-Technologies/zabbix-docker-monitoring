@@ -17,7 +17,7 @@ make
 gem install fpm
 mkdir -p usr/lib/modules
 cp zabbix_module_docker.so usr/lib/modules
-fpm -s dir -t rpm -n "zabbix_module_docker" -v 0.5.0 usr
+fpm -s dir -t rpm -n "zabbix_module_docker" -v 0.5.0 --iteration $BUILD_NUMBER usr
 
 cd ../../../..
 cp zabbix30/src/modules/zabbix_module_docker/zabbix_module_docker*.rpm .
